@@ -5,7 +5,8 @@ using UnityEngine;
 public class ShipMovement : MonoBehaviour
 {
     public int speed;
-    public Rigidbody rd;
+    private int maxspeed = 30;
+    public GameObject boat;
 
     // Start is called before the first frame update
     void Start()
@@ -24,22 +25,19 @@ public class ShipMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        Vector3 rdInput = Vector3.forward;
-        rd.MovePosition(transform.position + Vector3.forward * Time.deltaTime * speed);
-        Debug.Log(horizontal);
+        transform.position += boat.transform.forward * speed * Time.deltaTime;
 
         float angle = horizontal;
 
-        transform.Rotate(new Vector3(0, angle, 0), Space.Self);
+        boat.transform.Rotate(new Vector3(0, angle * ((maxspeed - speed + 10)/10), 0), Space.Self);
 
-        if (horizontal > 0)
+        if(vertical != 0)
         {
-            //Quaternion desiredRotation = Quaternion.LookRotation(rdInput, Vector3.up);
-            //transform.rotation = desiredRotation;
-        }
-        else if (rdInput == Vector3.zero)
-        {
-            //animator.SetBool("Moving", false);
+            Debug.Log("Speed is changed");
         }
     }
 }
+
+//Käytetyt oppaat:
+//https://docs.unity3d.com/ScriptReference/Transform.Rotate.html (Transform.Rotate Unity dokumentaatio)
+//https://docs.unity3d.com/ScriptReference/Vector3-forward.html (Vector3.forward Unity dokumentaatio)
