@@ -14,7 +14,7 @@ public class TimerScript : MonoBehaviour
     //https://www.youtube.com/watch?v=hxpUk0qiRGs The tutorial for making simple countdown.
 
     public float TimeStart;
-    private float TimeLeft;
+    public float TimeLeft;
     public bool TimerOn = false;
 
     public Text TimerTxt;
@@ -44,12 +44,6 @@ public class TimerScript : MonoBehaviour
         }
 
         TimerSlider.value = TimeLeft / TimeStart;
-
-        if (TimeLeft <= 0)
-        {
-            GameObject.FindWithTag("Player").GetComponent<ShipMovement>().speed = 0f;
-            GameObject.FindWithTag("Player").GetComponent<ShipMovement>().boat.SetActive(false);
-        }
     }
 
     void updateTimer(float currentTime)
