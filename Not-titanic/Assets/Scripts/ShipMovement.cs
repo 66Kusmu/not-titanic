@@ -30,7 +30,7 @@ public class ShipMovement : MonoBehaviour
 
         float angle = horizontal;
 
-        transform.Rotate(new Vector3(0, 0, angle), Space.Self);
+        transform.Rotate(new Vector3(0, angle, 0), Space.Self);
 
         if (horizontal > 0)
         {
