@@ -18,11 +18,12 @@ public class IceBerg : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
         //first we make sure that the object that hit the banana is the player.
         if (collision.gameObject.tag == "Player")
         {
             // This will search all player scripts for a function called "Hit Banana"
-            Debug.Log("Banana was hit by player");
+            Debug.Log("Iceberg was hit by player");
         }
     }
 
