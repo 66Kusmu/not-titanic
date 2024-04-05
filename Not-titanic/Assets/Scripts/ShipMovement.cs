@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShipMovement : MonoBehaviour
 {
@@ -9,16 +10,20 @@ public class ShipMovement : MonoBehaviour
     private float maxspeed = 50;
     public GameObject boat;
 
+    private TimerScript timer;
+
+    public Slider speedSlider;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer = GameObject.FindWithTag("Timer").GetComponent<TimerScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        speedSlider.value = speed / maxspeed;
     }
 
     void FixedUpdate()
@@ -30,9 +35,10 @@ public class ShipMovement : MonoBehaviour
 
         float angle = horizontal;
 
-        boat.transform.Rotate(new Vector3(0, angle * 3, 0), Space.Self);
+        if (timer.TimeLeft > 0)
+            boat.transform.Rotate(new Vector3(0, angle * 3, 0), Space.Self);
 
-        if(vertical > 0 && speed < maxspeed)
+        if(vertical > 0 && speed < maxspeed && timer.TimeLeft > 0)
         {
             if(speed + vertical / 2 > maxspeed)
             {
@@ -55,9 +61,24 @@ public class ShipMovement : MonoBehaviour
                 speed += vertical / 2;
             }
         }
+
+        if (timer.TimeLeft <= 0)
+        {
+            Debug.Log(speed);
+            if (speed > 0.05f)
+            {
+                speed *= 0.95f;
+            }
+            else
+            {
+                speed = 0f;
+            }
+            boat.SetActive(false);
+        }
     }
 }
 
 //Käytetyt oppaat:
 //https://docs.unity3d.com/ScriptReference/Transform.Rotate.html (Transform.Rotate Unity dokumentaatio)
 //https://docs.unity3d.com/ScriptReference/Vector3-forward.html (Vector3.forward Unity dokumentaatio)
+//https://docs.unity3d.com/ScriptReference/GameObject.FindWithTag.html (GameObject.FindWithTag Unity dokumentaatio)
