@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShipMovement : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class ShipMovement : MonoBehaviour
 
     private TimerScript timer;
 
+    public Slider speedSlider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,7 @@ public class ShipMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        speedSlider.value = speed / maxspeed;
     }
 
     void FixedUpdate()
