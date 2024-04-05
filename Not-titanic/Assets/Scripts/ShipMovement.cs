@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ShipMovement : MonoBehaviour
 {
-    [Range(10, 30)]
+    [Range(10, 50)]
     public float speed;
-    private float maxspeed = 30;
+    private float maxspeed = 50;
     public GameObject boat;
 
     // Start is called before the first frame update
@@ -30,34 +30,30 @@ public class ShipMovement : MonoBehaviour
 
         float angle = horizontal;
 
-        boat.transform.Rotate(new Vector3(0, angle * ((maxspeed - speed + 10)/10), 0), Space.Self);
+        boat.transform.Rotate(new Vector3(0, angle * 3, 0), Space.Self);
 
         if(vertical > 0 && speed < maxspeed)
         {
-            if(speed + vertical > maxspeed)
+            if(speed + vertical / 2 > maxspeed)
             {
                 speed = maxspeed;
             }
             else
             {
-                speed += vertical;
+                speed += vertical / 2;
             }
-
-            Debug.Log(speed);
         }
 
         if(vertical < 0 && speed > 10f)
         {
-            if (speed + vertical < 10f)
+            if (speed + vertical / 2 < 10f)
             {
                 speed = 10f;
             }
             else
             {
-                speed += vertical;
+                speed += vertical / 2;
             }
-
-            Debug.Log(speed);
         }
     }
 }
