@@ -11,16 +11,19 @@ using UnityEngine.UI;
 public class TimerScript : MonoBehaviour
 {
 
-//https://www.youtube.com/watch?v=hxpUk0qiRGs The tutorial for making simple countdown.
+    //https://www.youtube.com/watch?v=hxpUk0qiRGs The tutorial for making simple countdown.
 
-    public float TimeLeft;
+    public float TimeStart;
+    private float TimeLeft;
     public bool TimerOn = false;
 
     public Text TimerTxt;
+    public Slider TimerSlider;
 
     void Start()
     {
         TimerOn = true;
+        TimeLeft = TimeStart;
     }
 
     void Update()
@@ -38,6 +41,14 @@ public class TimerScript : MonoBehaviour
                 TimeLeft = 0;
                 TimerOn = false;
             }
+        }
+
+        TimerSlider.value = TimeLeft / TimeStart;
+
+        if (TimeLeft <= 0)
+        {
+            GameObject.FindWithTag("Player").GetComponent<ShipMovement>().speed = 0f;
+            GameObject.FindWithTag("Player").GetComponent<ShipMovement>().boat.SetActive(false);
         }
     }
 
