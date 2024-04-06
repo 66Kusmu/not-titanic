@@ -23,6 +23,8 @@ public class ShipMovement : MonoBehaviour
 
     public Image gameOver;
 
+    public ParticleSystem splashL, splashR;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,6 +78,8 @@ public class ShipMovement : MonoBehaviour
             else
             {
                 speed += vertical / 2;
+                splashL.emissionRate += vertical / 2;
+                splashR.emissionRate += vertical / 2;
             }
         }
 
@@ -88,6 +92,8 @@ public class ShipMovement : MonoBehaviour
             else
             {
                 speed += vertical / 2;
+                splashL.emissionRate += vertical / 2;
+                splashR.emissionRate += vertical / 2;
             }
         }
 
