@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 179888744}
   - component: {fileID: 179888743}
   - component: {fileID: 179888742}
+  - component: {fileID: 179888745}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -344,6 +345,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179888745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179888741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57ae371d2192a6f49b0678bd071a65d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &389554983
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +569,6 @@ GameObject:
   - component: {fileID: 1238305022}
   - component: {fileID: 1238305021}
   - component: {fileID: 1238305020}
-  - component: {fileID: 1238305019}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -584,19 +596,6 @@ RectTransform:
   m_AnchoredPosition: {x: -7.3999786, y: 4.2000084}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1238305019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1238305017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e88d8551d7df7b14b837abc732afa16f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OptionPanel: {fileID: 0}
 --- !u!114 &1238305020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,7 +639,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1238305021}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 179888745}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1238305021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -770,7 +781,6 @@ GameObject:
   - component: {fileID: 1263883754}
   - component: {fileID: 1263883753}
   - component: {fileID: 1263883752}
-  - component: {fileID: 1263883751}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -798,19 +808,6 @@ RectTransform:
   m_AnchoredPosition: {x: -7.600006, y: -72.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1263883751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263883749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e88d8551d7df7b14b837abc732afa16f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OptionPanel: {fileID: 0}
 --- !u!114 &1263883752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,7 +978,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1475406022}
-  - component: {fileID: 1475406023}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1011,19 +1007,6 @@ RectTransform:
   m_AnchoredPosition: {x: -42.5, y: 40.9}
   m_SizeDelta: {x: -700, y: -194}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1475406023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475406021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e88d8551d7df7b14b837abc732afa16f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OptionPanel: {fileID: 0}
 --- !u!1 &1498104524
 GameObject:
   m_ObjectHideFlags: 0
