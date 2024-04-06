@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6492151995376004738}
   - component: {fileID: 922192732432476149}
   - component: {fileID: 7755135585333701558}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Penguin
   m_Icon: {fileID: 0}

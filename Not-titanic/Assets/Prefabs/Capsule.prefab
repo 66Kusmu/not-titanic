@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2077906615214116469}
   - component: {fileID: 8742143999857233417}
   - component: {fileID: 5448996677944385723}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Plank
   m_Icon: {fileID: 0}
