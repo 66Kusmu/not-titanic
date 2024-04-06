@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShipMovement : MonoBehaviour
 {
@@ -9,16 +10,39 @@ public class ShipMovement : MonoBehaviour
     private float maxspeed = 50;
     public GameObject boat;
 
+    private TimerScript timer;
+
+    public Slider speedSlider;
+    public Text speedText;
+    public Text timeText;
+
+    private float time;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer = GameObject.FindWithTag("Timer").GetComponent<TimerScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        speedSlider.value = speed / maxspeed;
+        speedText.text = "Speed: " + Mathf.FloorToInt(speed).ToString();
+        if(timer.timeExtention > 1)
+        {
+            timeText.gameObject.SetActive(true);
+            timeText.text = "Slowdown: " + (timer.timeExtention - 1);
+        }
+        else if(timer.timeExtention < 1)
+        {
+            timeText.gameObject.SetActive(true);
+            timeText.text = "The ship is leaking more!!!";
+        }
+        else if (timer.timeExtention == 1)
+        {
+            timeText.gameObject.SetActive(false);
+        }
     }
 
     void FixedUpdate()
@@ -30,9 +54,10 @@ public class ShipMovement : MonoBehaviour
 
         float angle = horizontal;
 
-        boat.transform.Rotate(new Vector3(0, angle * 3, 0), Space.Self);
+        if (timer.TimeLeft > 0)
+            boat.transform.Rotate(new Vector3(0, angle * 3, 0), Space.Self);
 
-        if(vertical > 0 && speed < maxspeed)
+        if(vertical > 0 && speed < maxspeed && timer.TimeLeft > 0)
         {
             if(speed + vertical / 2 > maxspeed)
             {
@@ -44,7 +69,7 @@ public class ShipMovement : MonoBehaviour
             }
         }
 
-        if(vertical < 0 && speed > 10f)
+        if(vertical < 0 && speed > 10f && timer.TimeLeft > 0)
         {
             if (speed + vertical / 2 < 10f)
             {
@@ -55,9 +80,65 @@ public class ShipMovement : MonoBehaviour
                 speed += vertical / 2;
             }
         }
+
+        if (timer.TimeLeft <= 0)
+        {
+            if (speed > 0.05f)
+            {
+                speed *= 0.95f;
+            }
+            else
+            {
+                speed = 0f;
+            }
+            boat.SetActive(false);
+        }
+
+        if (timer.timeExtention > 1)
+        {
+            time += Time.deltaTime;
+
+            Debug.Log(time);
+
+            if (time >= 4f)
+            {
+                timer.timeExtention -= 1;
+                time = 0f;
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Iceberg")
+        {
+            timer.TimeLeft -= 20f;
+        }
+
+        if (other.gameObject.tag == "Penguin")
+        {
+            if (timer.timeExtention < 1)
+            {
+                timer.timeExtention *= 2;
+            }
+            if (timer.timeExtention < 4 && timer.timeExtention >= 1)
+            {
+                timer.timeExtention += 1;
+            }
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "Plank" && timer.TimeLeft > 0)
+        {
+            timer.TimeLeft += 20f;
+            Destroy(other.gameObject);
+            Debug.Log(timer.TimeLeft + " / " + timer.TimeStart);
+        }
     }
 }
 
 //Käytetyt oppaat:
 //https://docs.unity3d.com/ScriptReference/Transform.Rotate.html (Transform.Rotate Unity dokumentaatio)
 //https://docs.unity3d.com/ScriptReference/Vector3-forward.html (Vector3.forward Unity dokumentaatio)
+//https://docs.unity3d.com/ScriptReference/GameObject.FindWithTag.html (GameObject.FindWithTag Unity dokumentaatio)
+//https://docs.unity3d.com/ScriptReference/Collider.OnTriggerEnter.html (Collider.OnTriggerEnter(Collider) Unity dokumentaatio) Icebergiin

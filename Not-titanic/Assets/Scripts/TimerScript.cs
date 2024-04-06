@@ -11,16 +11,21 @@ using UnityEngine.UI;
 public class TimerScript : MonoBehaviour
 {
 
-//https://www.youtube.com/watch?v=hxpUk0qiRGs The tutorial for making simple countdown.
+    //https://www.youtube.com/watch?v=hxpUk0qiRGs The tutorial for making simple countdown.
 
+    public float TimeStart;
     public float TimeLeft;
     public bool TimerOn = false;
 
     public Text TimerTxt;
+    public Slider TimerSlider;
+
+    public int timeExtention = 1;
 
     void Start()
     {
         TimerOn = true;
+        TimeLeft = TimeStart;
     }
 
     void Update()
@@ -29,7 +34,7 @@ public class TimerScript : MonoBehaviour
         {
             if (TimeLeft > 0)
             {
-                TimeLeft -= Time.deltaTime;
+                TimeLeft -= Time.deltaTime/timeExtention;
                 updateTimer(TimeLeft);
             }
             else
@@ -39,6 +44,8 @@ public class TimerScript : MonoBehaviour
                 TimerOn = false;
             }
         }
+
+        TimerSlider.value = TimeLeft / TimeStart;
     }
 
     void updateTimer(float currentTime)
