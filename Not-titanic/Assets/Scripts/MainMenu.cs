@@ -46,4 +46,9 @@ public class MainMenu : MonoBehaviour
         Playing = true;
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
