@@ -74,7 +74,7 @@ public class GameOver : MonoBehaviour
 
             if (textTime <= 0 && buttonTime <= 0 && quitting)
             {
-                Debug.Log("SceneManager.LoadScene(SceneManager.GetActiveScene().menusceneindexorsmthIDK)");
+                SceneManager.LoadSceneAsync(0);
             }
         }
     }
