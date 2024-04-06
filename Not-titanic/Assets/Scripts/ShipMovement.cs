@@ -120,7 +120,10 @@ public class ShipMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Iceberg")
         {
-            timer.TimeLeft -= 20f;
+            if (timer.TimeLeft <= 20f)
+                timer.TimeLeft = 0;
+            else
+                timer.TimeLeft -= 20f;
         }
 
         if (other.gameObject.tag == "Penguin")
