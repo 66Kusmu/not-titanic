@@ -45,9 +45,8 @@ public class GameOver : MonoBehaviour
         }
     }
 
-    public void Retry()
+    public void RetryLevel()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Debug.Log("Retrying");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
