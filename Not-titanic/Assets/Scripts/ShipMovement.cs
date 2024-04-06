@@ -16,6 +16,8 @@ public class ShipMovement : MonoBehaviour
     public Text speedText;
     public Text timeText;
 
+    private float time;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,10 +34,14 @@ public class ShipMovement : MonoBehaviour
             timeText.gameObject.SetActive(true);
             timeText.text = "Slowdown: " + (timer.timeExtention - 1);
         }
-        if(timer.timeExtention < 1)
+        else if(timer.timeExtention < 1)
         {
             timeText.gameObject.SetActive(true);
             timeText.text = "The ship is leaking more!!!";
+        }
+        else if (timer.timeExtention == 1)
+        {
+            timeText.gameObject.SetActive(false);
         }
     }
 
@@ -86,6 +92,19 @@ public class ShipMovement : MonoBehaviour
                 speed = 0f;
             }
             boat.SetActive(false);
+        }
+
+        if (timer.timeExtention > 1)
+        {
+            time += Time.deltaTime;
+
+            Debug.Log(time);
+
+            if (time >= 4f)
+            {
+                timer.timeExtention -= 1;
+                time = 0f;
+            }
         }
     }
 
