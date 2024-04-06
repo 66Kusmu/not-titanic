@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 492612791}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Iceberg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -681,6 +681,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipDemoOriginal
       objectReference: {fileID: 0}
+    - target: {fileID: 1027261612289400500, guid: 233389664e6a2ba4a98f53ec3173be41, type: 3}
+      propertyPath: m_Size.x
+      value: 1.7999778
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027261612289400500, guid: 233389664e6a2ba4a98f53ec3173be41, type: 3}
+      propertyPath: m_Center.x
+      value: 0.00442943
+      objectReference: {fileID: 0}
     - target: {fileID: 2354866666511665203, guid: 233389664e6a2ba4a98f53ec3173be41, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -724,14 +732,6 @@ PrefabInstance:
     - target: {fileID: 2479607306982287496, guid: 233389664e6a2ba4a98f53ec3173be41, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5777765936669523631, guid: 233389664e6a2ba4a98f53ec3173be41, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5777765936669523631, guid: 233389664e6a2ba4a98f53ec3173be41, type: 3}
-      propertyPath: m_ProvidesContacts
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8944711416319740709, guid: 233389664e6a2ba4a98f53ec3173be41, type: 3}
       propertyPath: m_AnchorMax.y

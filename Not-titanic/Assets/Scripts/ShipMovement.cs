@@ -13,6 +13,7 @@ public class ShipMovement : MonoBehaviour
     private TimerScript timer;
 
     public Slider speedSlider;
+    public Text speedText;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class ShipMovement : MonoBehaviour
     void Update()
     {
         speedSlider.value = speed / maxspeed;
+        speedText.text = "Speed: " + Mathf.FloorToInt(speed).ToString();
     }
 
     void FixedUpdate()
@@ -50,7 +52,7 @@ public class ShipMovement : MonoBehaviour
             }
         }
 
-        if(vertical < 0 && speed > 10f)
+        if(vertical < 0 && speed > 10f && timer.TimeLeft > 0)
         {
             if (speed + vertical / 2 < 10f)
             {
@@ -64,7 +66,6 @@ public class ShipMovement : MonoBehaviour
 
         if (timer.TimeLeft <= 0)
         {
-            Debug.Log(speed);
             if (speed > 0.05f)
             {
                 speed *= 0.95f;
@@ -74,6 +75,14 @@ public class ShipMovement : MonoBehaviour
                 speed = 0f;
             }
             boat.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Iceberg")
+        {
+            timer.TimeLeft -= 20f;
         }
     }
 }
