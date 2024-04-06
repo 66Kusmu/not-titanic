@@ -39,7 +39,6 @@ public class TimerScript : MonoBehaviour
             if (TimeLeft > 0)
             {
                 TimeLeft -= Time.deltaTime/timeExtention;
-                updateTimer(TimeLeft);
             }
             else
             {
@@ -47,6 +46,7 @@ public class TimerScript : MonoBehaviour
                 TimeLeft = 0;
                 TimerOn = false;
             }
+            updateTimer(TimeLeft);
         }
 
         player.TimerSlider.value = TimeLeft / TimeStart;

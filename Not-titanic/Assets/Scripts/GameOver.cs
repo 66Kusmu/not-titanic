@@ -18,11 +18,13 @@ public class GameOver : MonoBehaviour
 
     public bool dead;
     private bool retrying;
+    private bool quitting;
     
     // Start is called before the first frame update
     void Start()
     {
         retrying = false;
+        quitting = false;
     }
 
     // Update is called once per frame
@@ -38,14 +40,14 @@ public class GameOver : MonoBehaviour
         {
             bannerTime += Time.deltaTime;
             banner.color = new Color(0, 0, 0, bannerTime);
-            if (!retrying && bannerTime >= 1)
+            if (!retrying && !quitting && bannerTime >= 1)
             {
                 textTime += Time.deltaTime * 0.5f;
                 gameOverText.gameObject.SetActive(true);
                 retry.gameObject.SetActive(true);
                 quit.gameObject.SetActive(true);
             }
-            if (!retrying && textTime >= 1)
+            if (!retrying && !quitting && textTime >= 1)
             {
                 buttonTime += Time.deltaTime * 2.5f;
             }
@@ -53,6 +55,11 @@ public class GameOver : MonoBehaviour
             {
                 textTime -= Time.deltaTime * 0.5f;
                 buttonTime -= Time.deltaTime * 0.5f;
+            }
+            if (quitting)
+            {
+                textTime -= Time.deltaTime;
+                buttonTime -= Time.deltaTime;
             }
             gameOverText.color = new Color(255, 255, 255, textTime);
             retry.image.color = new Color(255, 255, 255, buttonTime);
@@ -64,6 +71,11 @@ public class GameOver : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
+
+            if (textTime <= 0 && buttonTime <= 0 && quitting)
+            {
+                Debug.Log("SceneManager.LoadScene(SceneManager.GetActiveScene().menusceneindexorsmthIDK)");
+            }
         }
     }
 
@@ -72,5 +84,13 @@ public class GameOver : MonoBehaviour
         textTime = 1;
         buttonTime = 1;
         retrying = true;
+    }
+
+    public void Quit()
+    {
+        textTime = 1;
+        buttonTime = 1;
+        Debug.Log(textTime + ", " + buttonTime);
+        quitting = true;
     }
 }
