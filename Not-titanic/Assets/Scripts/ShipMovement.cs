@@ -51,7 +51,7 @@ public class ShipMovement : MonoBehaviour
 
         if(timer.TimeLeft <= 0)
         {
-            gameOver.gameObject.SetActive(true);
+            gameOver.GetComponent<GameOver>().dead = true;
         }
     }
 
