@@ -5489,6 +5489,8 @@ MonoBehaviour:
   TimerTxt: {fileID: 3991385587353462977}
   TimerSlider: {fileID: 7010360977186979661}
   gameOver: {fileID: 2551932616307154250}
+  splashL: {fileID: 6451260540936536972}
+  splashR: {fileID: 3859104400590674342}
 --- !u!54 &6294350392146774394
 Rigidbody:
   m_ObjectHideFlags: 0
