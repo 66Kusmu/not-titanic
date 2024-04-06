@@ -20,8 +20,7 @@ public class TimerScript : MonoBehaviour
     public float TimeLeft;
     public bool TimerOn = false;
 
-    public Text TimerTxt;
-    public Slider TimerSlider;
+    private ShipMovement player;
 
     public int timeExtention = 1;
 
@@ -29,6 +28,8 @@ public class TimerScript : MonoBehaviour
     {
         TimerOn = true;
         TimeLeft = TimeStart;
+
+        player = GameObject.FindWithTag("Player").GetComponent<ShipMovement>();
     }
 
     void Update()
@@ -48,7 +49,7 @@ public class TimerScript : MonoBehaviour
             }
         }
 
-        TimerSlider.value = TimeLeft / TimeStart;
+        player.TimerSlider.value = TimeLeft / TimeStart;
     }
 
     void updateTimer(float currentTime)
@@ -59,14 +60,14 @@ public class TimerScript : MonoBehaviour
             minutes = Mathf.FloorToInt(TimeStart / 60);
             seconds = Mathf.FloorToInt(TimeStart % 60);
 
-            TimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds) + " + " + Mathf.FloorToInt(currentTime - TimeStart).ToString();
+            player.TimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds) + " + " + Mathf.FloorToInt(currentTime - TimeStart).ToString();
         }
         else
         {
             minutes = Mathf.FloorToInt(currentTime / 60);
             seconds = Mathf.FloorToInt(currentTime % 60);
 
-            TimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+            player.TimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds);
         }
 
     }
