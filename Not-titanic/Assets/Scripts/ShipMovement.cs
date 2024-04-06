@@ -13,6 +13,10 @@ public class ShipMovement : MonoBehaviour
     private TimerScript timer;
 
     public Slider speedSlider;
+    public Text speedText;
+    public Text timeText;
+
+    private float time;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +28,21 @@ public class ShipMovement : MonoBehaviour
     void Update()
     {
         speedSlider.value = speed / maxspeed;
+        speedText.text = "Speed: " + Mathf.FloorToInt(speed).ToString();
+        if(timer.timeExtention > 1)
+        {
+            timeText.gameObject.SetActive(true);
+            timeText.text = "Slowdown: " + (timer.timeExtention - 1);
+        }
+        else if(timer.timeExtention < 1)
+        {
+            timeText.gameObject.SetActive(true);
+            timeText.text = "The ship is leaking more!!!";
+        }
+        else if (timer.timeExtention == 1)
+        {
+            timeText.gameObject.SetActive(false);
+        }
     }
 
     void FixedUpdate()
@@ -50,7 +69,7 @@ public class ShipMovement : MonoBehaviour
             }
         }
 
-        if(vertical < 0 && speed > 10f)
+        if(vertical < 0 && speed > 10f && timer.TimeLeft > 0)
         {
             if (speed + vertical / 2 < 10f)
             {
@@ -64,7 +83,6 @@ public class ShipMovement : MonoBehaviour
 
         if (timer.TimeLeft <= 0)
         {
-            Debug.Log(speed);
             if (speed > 0.05f)
             {
                 speed *= 0.95f;
@@ -74,6 +92,44 @@ public class ShipMovement : MonoBehaviour
                 speed = 0f;
             }
             boat.SetActive(false);
+        }
+
+        if (timer.timeExtention > 1)
+        {
+            time += Time.deltaTime;
+
+            if (time >= 4f)
+            {
+                timer.timeExtention -= 1;
+                time = 0f;
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Iceberg")
+        {
+            timer.TimeLeft -= 20f;
+        }
+
+        if (other.gameObject.tag == "Penguin")
+        {
+            if (timer.timeExtention < 1)
+            {
+                timer.timeExtention *= 2;
+            }
+            if (timer.timeExtention < 4 && timer.timeExtention >= 1)
+            {
+                timer.timeExtention += 1;
+            }
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "Plank" && timer.TimeLeft > 0)
+        {
+            timer.TimeLeft += 20f;
+            Destroy(other.gameObject);
         }
     }
 }
