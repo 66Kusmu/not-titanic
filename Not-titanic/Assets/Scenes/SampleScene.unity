@@ -981,6 +981,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7826831637297011630, guid: 233389664e6a2ba4a98f53ec3173be41, type: 3}
+      propertyPath: boat
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826831637297011630, guid: 233389664e6a2ba4a98f53ec3173be41, type: 3}
       propertyPath: timeText
       value: 
       objectReference: {fileID: 1699815163}

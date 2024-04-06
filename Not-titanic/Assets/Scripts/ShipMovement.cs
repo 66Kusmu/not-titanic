@@ -98,8 +98,6 @@ public class ShipMovement : MonoBehaviour
         {
             time += Time.deltaTime;
 
-            Debug.Log(time);
-
             if (time >= 4f)
             {
                 timer.timeExtention -= 1;
@@ -132,7 +130,6 @@ public class ShipMovement : MonoBehaviour
         {
             timer.TimeLeft += 20f;
             Destroy(other.gameObject);
-            Debug.Log(timer.TimeLeft + " / " + timer.TimeStart);
         }
     }
 }
