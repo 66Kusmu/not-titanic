@@ -8,6 +8,7 @@ TagManager:
   - Iceberg
   - Penguin
   - Plank
+  - WayPoints
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Collectable
   - 
   - 
   - 
