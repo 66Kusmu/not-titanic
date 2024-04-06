@@ -16,6 +16,9 @@ public class ShipMovement : MonoBehaviour
     public Text speedText;
     public Text timeText;
 
+    public Text TimerTxt;
+    public Slider TimerSlider;
+
     private float time;
 
     public Image gameOver;

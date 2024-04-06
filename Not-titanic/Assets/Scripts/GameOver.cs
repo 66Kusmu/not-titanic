@@ -35,7 +35,7 @@ public class GameOver : MonoBehaviour
             gameOverText.color = new Color(255, 255, 255, textTime);
             if (textTime >= 1)
             {
-                buttonTime += Time.deltaTime * 5f;
+                buttonTime += Time.deltaTime * 2.5f;
             }
             retry.image.color = new Color(255, 255, 255, buttonTime);
             quit.image.color = new Color(255, 255, 255, buttonTime);
