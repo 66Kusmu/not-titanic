@@ -98,10 +98,22 @@ public class ShipMovement : MonoBehaviour
 
         if (other.gameObject.tag == "Penguin")
         {
-            if (timer.timeExtention < 4)
+            if (timer.timeExtention < 1)
+            {
+                timer.timeExtention *= 2;
+            }
+            if (timer.timeExtention < 4 && timer.timeExtention >= 1)
             {
                 timer.timeExtention += 1;
             }
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "Plank" && timer.TimeLeft > 0)
+        {
+            timer.TimeLeft += 20f;
+            Destroy(other.gameObject);
+            Debug.Log(timer.TimeLeft + " / " + timer.TimeStart);
         }
     }
 }
