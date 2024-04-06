@@ -449,17 +449,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &355673622 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7010360977186979661, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-  m_PrefabInstance: {fileID: 7097466815497901701}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &398173635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,7 +1086,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 122731ba2318c044299610ae73b8db72, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1375,28 +1364,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e6f1c1007905fe4e885c41a0fb3fabf, type: 3}
---- !u!114 &1672971981 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2551932616307154250, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-  m_PrefabInstance: {fileID: 7097466815497901701}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1730092757 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3991385587353462977, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-  m_PrefabInstance: {fileID: 7097466815497901701}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1814290639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1703,18 +1670,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1888185429873735660, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: TimerTxt
-      value: 
-      objectReference: {fileID: 1730092757}
-    - target: {fileID: 1888185429873735660, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: gameOver
-      value: 
-      objectReference: {fileID: 1672971981}
-    - target: {fileID: 1888185429873735660, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: TimerSlider
-      value: 
-      objectReference: {fileID: 355673622}
     - target: {fileID: 2199848461733262167, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1727,6 +1682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipDemoParticles
       objectReference: {fileID: 0}
+    - target: {fileID: 2970240363298457774, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3933659801435064634, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1749,6 +1708,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4583755401467749845, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594160206493381922, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6385764952373569548, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
@@ -1789,6 +1752,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6385764952373569548, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125205714769759710, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872231520219496494, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
