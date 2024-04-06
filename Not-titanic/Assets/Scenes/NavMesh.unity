@@ -1678,22 +1678,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2304717098301233101, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.4716981
-      objectReference: {fileID: 0}
-    - target: {fileID: 2304717098301233101, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.4716981
-      objectReference: {fileID: 0}
-    - target: {fileID: 2304717098301233101, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.4716981
-      objectReference: {fileID: 0}
     - target: {fileID: 2645137322806476002, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: m_Name
       value: ShipDemoParticles
       objectReference: {fileID: 0}
+    - target: {fileID: 2970240363298457774, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3933659801435064634, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1716,6 +1708,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4583755401467749845, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594160206493381922, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6385764952373569548, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
@@ -1758,17 +1754,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6572190679105358040, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.4745098
+    - target: {fileID: 8125205714769759710, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6572190679105358040, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.4745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 6572190679105358040, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.4745098
+    - target: {fileID: 8872231520219496494, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

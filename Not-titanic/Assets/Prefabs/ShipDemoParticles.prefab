@@ -5558,7 +5558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8696590536968895546
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5637,6 +5637,7 @@ MonoBehaviour:
   retryText: {fileID: 8272600076567889997}
   quit: {fileID: 6572190679105358040}
   quitText: {fileID: 1671741816034370581}
+  dead: 0
 --- !u!1 &3001461080299519174
 GameObject:
   m_ObjectHideFlags: 0
@@ -10668,7 +10669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4284808916712131053
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11438,7 +11439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8954682165814915368
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11607,7 +11608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8977648255952571642
 RectTransform:
   m_ObjectHideFlags: 0
