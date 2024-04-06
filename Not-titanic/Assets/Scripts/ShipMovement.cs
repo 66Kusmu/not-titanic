@@ -18,6 +18,8 @@ public class ShipMovement : MonoBehaviour
 
     private float time;
 
+    public Image gameOver;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,11 @@ public class ShipMovement : MonoBehaviour
         else if (timer.timeExtention == 1)
         {
             timeText.gameObject.SetActive(false);
+        }
+
+        if(timer.TimeLeft <= 0)
+        {
+            gameOver.gameObject.SetActive(true);
         }
     }
 
@@ -139,3 +146,5 @@ public class ShipMovement : MonoBehaviour
 //https://docs.unity3d.com/ScriptReference/Vector3-forward.html (Vector3.forward Unity dokumentaatio)
 //https://docs.unity3d.com/ScriptReference/GameObject.FindWithTag.html (GameObject.FindWithTag Unity dokumentaatio)
 //https://docs.unity3d.com/ScriptReference/Collider.OnTriggerEnter.html (Collider.OnTriggerEnter(Collider) Unity dokumentaatio) Icebergiin
+//https://www.youtube.com/watch?v=whkC8f3oNOk (3D ENEMY AI in UNITY - (E01): STATE MACHINE BEHAVIORS) CollectableMovementiin
+//https://www.youtube.com/watch?v=WiUUW9RSa5Y (Unity Tutorial - How to create a fade away text display) GameOveriin
