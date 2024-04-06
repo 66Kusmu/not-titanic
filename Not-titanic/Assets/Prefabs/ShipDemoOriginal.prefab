@@ -133,6 +133,7 @@ MonoBehaviour:
   speedSlider: {fileID: 5644832078523787811}
   speedText: {fileID: 8387439763929824601}
   timeText: {fileID: 6489799549690315673}
+  gameOver: {fileID: 0}
 --- !u!54 &4840083470372329712
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -871,7 +872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &938360746446068802
 RectTransform:
   m_ObjectHideFlags: 0
