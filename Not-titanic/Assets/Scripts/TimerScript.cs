@@ -20,6 +20,8 @@ public class TimerScript : MonoBehaviour
     public Text TimerTxt;
     public Slider TimerSlider;
 
+    public int timeExtention = 1;
+
     void Start()
     {
         TimerOn = true;
@@ -32,7 +34,7 @@ public class TimerScript : MonoBehaviour
         {
             if (TimeLeft > 0)
             {
-                TimeLeft -= Time.deltaTime;
+                TimeLeft -= Time.deltaTime/timeExtention;
                 updateTimer(TimeLeft);
             }
             else

@@ -14,6 +14,7 @@ public class ShipMovement : MonoBehaviour
 
     public Slider speedSlider;
     public Text speedText;
+    public Text timeText;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,16 @@ public class ShipMovement : MonoBehaviour
     {
         speedSlider.value = speed / maxspeed;
         speedText.text = "Speed: " + Mathf.FloorToInt(speed).ToString();
+        if(timer.timeExtention > 1)
+        {
+            timeText.gameObject.SetActive(true);
+            timeText.text = "Slowdown: " + (timer.timeExtention - 1);
+        }
+        if(timer.timeExtention < 1)
+        {
+            timeText.gameObject.SetActive(true);
+            timeText.text = "The ship is leaking more!!!";
+        }
     }
 
     void FixedUpdate()
@@ -83,6 +94,14 @@ public class ShipMovement : MonoBehaviour
         if (other.gameObject.tag == "Iceberg")
         {
             timer.TimeLeft -= 20f;
+        }
+
+        if (other.gameObject.tag == "Penguin")
+        {
+            if (timer.timeExtention < 4)
+            {
+                timer.timeExtention += 1;
+            }
         }
     }
 }
