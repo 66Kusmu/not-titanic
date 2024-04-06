@@ -480,6 +480,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &763089332 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7816031065769476133, guid: 233389664e6a2ba4a98f53ec3173be41, type: 3}
+  m_PrefabInstance: {fileID: 6791270721050339383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1000034184
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +988,7 @@ PrefabInstance:
     - target: {fileID: 7826831637297011630, guid: 233389664e6a2ba4a98f53ec3173be41, type: 3}
       propertyPath: boat
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 763089332}
     - target: {fileID: 7826831637297011630, guid: 233389664e6a2ba4a98f53ec3173be41, type: 3}
       propertyPath: timeText
       value: 
