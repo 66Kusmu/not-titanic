@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
@@ -42,5 +43,11 @@ public class GameOver : MonoBehaviour
             retryText.color = new Color(0, 0, 0, buttonTime);
             quitText.color = new Color(0, 0, 0, buttonTime);
         }
+    }
+
+    public void Retry()
+    {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("Retrying");
     }
 }
