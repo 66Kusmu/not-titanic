@@ -16,6 +16,9 @@ public class ShipMovement : MonoBehaviour
     public Text speedText;
     public Text timeText;
 
+    public Text TimerTxt;
+    public Slider TimerSlider;
+
     private float time;
 
     public Image gameOver;
@@ -48,7 +51,7 @@ public class ShipMovement : MonoBehaviour
 
         if(timer.TimeLeft <= 0)
         {
-            gameOver.gameObject.SetActive(true);
+            gameOver.GetComponent<GameOver>().dead = true;
         }
     }
 
@@ -117,7 +120,10 @@ public class ShipMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Iceberg")
         {
-            timer.TimeLeft -= 20f;
+            if (timer.TimeLeft <= 20f)
+                timer.TimeLeft = 0;
+            else
+                timer.TimeLeft -= 20f;
         }
 
         if (other.gameObject.tag == "Penguin")
