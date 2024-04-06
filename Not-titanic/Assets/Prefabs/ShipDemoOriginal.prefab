@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  boat: {fileID: 0}
+  boat: {fileID: 7816031065769476133}
   speedSlider: {fileID: 5644832078523787811}
   speedText: {fileID: 8387439763929824601}
   timeText: {fileID: 6489799549690315673}
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.185
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2216981, g: 0.39567143, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.23381662, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -995,5 +995,10 @@ PrefabInstance:
 --- !u!4 &7436514438572399263 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dc9f7098e3cad1c488050f70fec5f873, type: 3}
+  m_PrefabInstance: {fileID: 6969732766935465332}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7816031065769476133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dc9f7098e3cad1c488050f70fec5f873, type: 3}
   m_PrefabInstance: {fileID: 6969732766935465332}
   m_PrefabAsset: {fileID: 0}
