@@ -124,6 +124,8 @@ public class ShipMovement : MonoBehaviour
                 timer.TimeLeft = 0;
             else
                 timer.TimeLeft -= 20f;
+
+            other.gameObject.GetComponent<EmitParticlesTest>().EmitHitParticle();
         }
 
         if (other.gameObject.tag == "Penguin")

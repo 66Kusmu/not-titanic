@@ -16,10 +16,12 @@ public class EmitParticlesTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            particleSystem.Emit(30);
-        }
+        
+    }
+
+    public void EmitHitParticle()
+    {
+        particleSystem.Emit(30);
     }
 }
 
