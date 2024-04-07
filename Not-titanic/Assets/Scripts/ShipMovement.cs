@@ -25,6 +25,8 @@ public class ShipMovement : MonoBehaviour
 
     public ParticleSystem splashL, splashR;
 
+    public float ConstraintX, ConstraintY;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,8 +64,16 @@ public class ShipMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        transform.position += boat.transform.forward * speed * Time.deltaTime;
-
+        if (transform.position.x >= ConstraintX || transform.position.x <= -ConstraintX || transform.position.z >= ConstraintY || transform.position.z <= -ConstraintY)
+        {
+            transform.position += boat.transform.forward * (speed / Mathf.Pow(Vector3.Distance(Vector3.zero, transform.position) / 100, 3)) * Time.deltaTime;
+            Debug.Log(Vector3.Distance(Vector3.zero, transform.position) / 100 * (Vector3.Distance(Vector3.zero, transform.position) / 100));
+        }
+        else
+        {
+            transform.position += boat.transform.forward * speed * Time.deltaTime;
+        }
+        
         float angle = horizontal;
 
         if (timer.TimeLeft > 0)
@@ -162,3 +172,4 @@ public class ShipMovement : MonoBehaviour
 //https://docs.unity3d.com/ScriptReference/Collider.OnTriggerEnter.html (Collider.OnTriggerEnter(Collider) Unity dokumentaatio) Icebergiin
 //https://www.youtube.com/watch?v=whkC8f3oNOk (3D ENEMY AI in UNITY - (E01): STATE MACHINE BEHAVIORS) CollectableMovementiin
 //https://www.youtube.com/watch?v=WiUUW9RSa5Y (Unity Tutorial - How to create a fade away text display) GameOveriin
+//https://docs.unity3d.com/ScriptReference/Vector3.Distance.html (Vector3.Distance Unity dokumentaatio)
