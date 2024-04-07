@@ -650,7 +650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71919a1f469cfc44b9038cff1fd3389b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnable: {fileID: 566470557082953492, guid: 0110f7f87980bae47bb51306b9368efb, type: 3}
+  spawnable: {fileID: 3505573476794337865, guid: 2051a2027e20ad64eaa8e68172342360, type: 3}
 --- !u!114 &398173637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71919a1f469cfc44b9038cff1fd3389b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnable: {fileID: 3564518601788384511, guid: e27f93ed58e6cde40b8d4cbc65320cfc, type: 3}
+  spawnable: {fileID: 7537186533140118949, guid: f06a61352d236df4c876d8b62b942987, type: 3}
 --- !u!4 &398173638
 Transform:
   m_ObjectHideFlags: 0
