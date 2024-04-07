@@ -51,7 +51,7 @@ public class ShipMovement : MonoBehaviour
             timeText.gameObject.SetActive(false);
         }
 
-        if(timer.TimeLeft <= 0)
+        if(timer.TimeLeft <= 0 && speed < 1f)
         {
             gameOver.GetComponent<GameOver>().dead = true;
         }
