@@ -394,8 +394,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -82.2, y: 24.8}
-  m_SizeDelta: {x: 351.2, y: 150}
+  m_AnchoredPosition: {x: -96, y: 24.8}
+  m_SizeDelta: {x: 362.76, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &239483498
 MonoBehaviour:
@@ -443,7 +443,8 @@ MonoBehaviour:
     Planks
     restore some of your time.
 
-    Don''t hit icebergs.'
+    Don''t hit icebergs. And don''t wander too far.
+    The water gets too cold to drive fast.'
 --- !u!222 &239483499
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -567,7 +568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -178.2, y: -69}
+  m_AnchoredPosition: {x: -198.2, y: -69}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &502369493
@@ -791,7 +792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -135.78, y: -31.799992}
+  m_AnchoredPosition: {x: -155.78, y: -31.799992}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &917112120
@@ -936,7 +937,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -135.78, y: 4.2000084}
+  m_AnchoredPosition: {x: -155.78, y: 4.2000084}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1238305020
@@ -1148,7 +1149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -135.78, y: -72.5}
+  m_AnchoredPosition: {x: -155.78, y: -72.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1263883752
