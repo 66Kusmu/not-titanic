@@ -60,7 +60,7 @@ public class TimerScript : MonoBehaviour
             minutes = Mathf.FloorToInt(TimeStart / 60);
             seconds = Mathf.FloorToInt(TimeStart % 60);
 
-            player.TimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds) + " + " + Mathf.FloorToInt(currentTime - TimeStart).ToString();
+            player.TimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds) + " \n+ " + Mathf.FloorToInt(currentTime - TimeStart).ToString();
         }
         else
         {
