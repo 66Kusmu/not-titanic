@@ -73,7 +73,6 @@ public class ShipMovement : MonoBehaviour
         if (transform.position.x >= ConstraintX || transform.position.x <= -ConstraintX || transform.position.z >= ConstraintY || transform.position.z <= -ConstraintY)
         {
             transform.position += boat.transform.forward * (speed / Mathf.Pow(Vector3.Distance(Vector3.zero, transform.position) / 100, 3)) * Time.deltaTime;
-            Debug.Log(Vector3.Distance(Vector3.zero, transform.position) / 100 * (Vector3.Distance(Vector3.zero, transform.position) / 100));
         }
         else
         {

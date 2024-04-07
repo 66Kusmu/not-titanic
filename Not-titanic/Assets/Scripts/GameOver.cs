@@ -54,7 +54,6 @@ public class GameOver : MonoBehaviour
                 retryText.gameObject.SetActive(true);
                 quitText.gameObject.SetActive(true);
                 resultText.gameObject.SetActive(true);
-                Debug.Log(buttonTime);
             }
             if (!retrying && !quitting && textTime >= 1)
             {
