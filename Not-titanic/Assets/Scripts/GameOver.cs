@@ -12,6 +12,7 @@ public class GameOver : MonoBehaviour
     public Text retryText;
     public Button quit;
     public Text quitText;
+    public Text resultText;
     private float bannerTime = 1;
     private float textTime = 0;
     private float buttonTime = 0;
@@ -50,6 +51,10 @@ public class GameOver : MonoBehaviour
                 gameOverText.gameObject.SetActive(true);
                 retry.gameObject.SetActive(true);
                 quit.gameObject.SetActive(true);
+                retryText.gameObject.SetActive(true);
+                quitText.gameObject.SetActive(true);
+                resultText.gameObject.SetActive(true);
+                Debug.Log(buttonTime);
             }
             if (!retrying && !quitting && textTime >= 1)
             {
@@ -70,6 +75,7 @@ public class GameOver : MonoBehaviour
             quit.image.color = new Color(255, 255, 255, buttonTime);
             retryText.color = new Color(0, 0, 0, buttonTime);
             quitText.color = new Color(0, 0, 0, buttonTime);
+            resultText.color = new Color(255, 255, 255, buttonTime);
 
             if (textTime <= 0 && buttonTime <= 0 && retrying)
             {
@@ -94,7 +100,6 @@ public class GameOver : MonoBehaviour
     {
         textTime = 1;
         buttonTime = 1;
-        Debug.Log(textTime + ", " + buttonTime);
         quitting = true;
     }
 }
