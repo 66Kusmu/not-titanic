@@ -4008,6 +4008,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipDemoParticles
       objectReference: {fileID: 0}
+    - target: {fileID: 3347092635076003142, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3727532833795525635, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: m_SizeDelta.x
       value: 171.0052
@@ -4090,6 +4094,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6385764952373569548, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594920103450876764, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7432801030301714994, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
