@@ -14,7 +14,6 @@ public class ShipMovement : MonoBehaviour
 
     public Slider speedSlider;
     public Text speedText;
-    public Text timeText;
 
     public Text TimerTxt;
     public Slider TimerSlider;
@@ -30,6 +29,8 @@ public class ShipMovement : MonoBehaviour
     public AudioClip penguin, plank;
     private AudioSource voice;
 
+    public Image Pen1, Pen2, Pen3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,20 +43,21 @@ public class ShipMovement : MonoBehaviour
     {
         speedSlider.value = speed / maxspeed;
         speedText.text = "Speed: " + Mathf.FloorToInt(speed).ToString();
+
         if(timer.timeExtention > 1)
-        {
-            timeText.gameObject.SetActive(true);
-            timeText.text = "Slowdown: " + (timer.timeExtention - 1);
-        }
-        else if(timer.timeExtention < 1)
-        {
-            timeText.gameObject.SetActive(true);
-            timeText.text = "The ship is leaking more!!!";
-        }
-        else if (timer.timeExtention == 1)
-        {
-            timeText.gameObject.SetActive(false);
-        }
+            Pen1.gameObject.SetActive(true);
+        else
+            Pen1.gameObject.SetActive(false);
+
+        if (timer.timeExtention > 2)
+            Pen2.gameObject.SetActive(true);
+        else
+            Pen2.gameObject.SetActive(false);
+
+        if (timer.timeExtention > 3)
+            Pen3.gameObject.SetActive(true);
+        else
+            Pen3.gameObject.SetActive(false);
 
         if(timer.TimeLeft <= 0 && speed < 1f)
         {

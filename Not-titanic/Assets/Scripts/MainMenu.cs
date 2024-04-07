@@ -19,7 +19,6 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(bannerTime);
         if (!Playing && bannerTime > 0)
         {
             bannerTime -= Time.deltaTime;
