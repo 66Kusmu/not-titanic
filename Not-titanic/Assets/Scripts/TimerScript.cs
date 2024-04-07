@@ -49,7 +49,7 @@ public class TimerScript : MonoBehaviour
             updateTimer(TimeLeft);
         }
 
-        player.TimerSlider.value = TimeLeft / TimeStart;
+        player.TimerSlider.value = 1 - (TimeLeft / TimeStart);
     }
 
     void updateTimer(float currentTime)
