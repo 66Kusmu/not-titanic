@@ -19,12 +19,15 @@ public class GameOver : MonoBehaviour
     public bool dead;
     private bool retrying;
     private bool quitting;
+    private AudioSource horror;
+    public AudioClip h;
     
     // Start is called before the first frame update
     void Start()
     {
         retrying = false;
         quitting = false;
+        horror = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,6 +41,7 @@ public class GameOver : MonoBehaviour
 
         if (dead)
         {
+            horror.PlayOneShot(h);
             bannerTime += Time.deltaTime;
             banner.color = new Color(0, 0, 0, bannerTime);
             if (!retrying && !quitting && bannerTime >= 1)

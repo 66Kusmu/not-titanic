@@ -27,10 +27,14 @@ public class ShipMovement : MonoBehaviour
 
     public float ConstraintX, ConstraintY;
 
+    public AudioClip penguin, plank;
+    private AudioSource voice;
+
     // Start is called before the first frame update
     void Start()
     {
         timer = GameObject.FindWithTag("Timer").GetComponent<TimerScript>();
+        voice = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -142,6 +146,7 @@ public class ShipMovement : MonoBehaviour
                 timer.TimeLeft -= 20f;
 
             other.gameObject.GetComponent<EmitParticlesTest>().EmitHitParticle();
+            other.gameObject.GetComponent<AudioSource>().Play();
         }
 
         if (other.gameObject.tag == "Penguin")
@@ -155,12 +160,14 @@ public class ShipMovement : MonoBehaviour
                 timer.timeExtention += 1;
             }
             Destroy(other.gameObject);
+            voice.PlayOneShot(penguin);
         }
 
         if (other.gameObject.tag == "Plank" && timer.TimeLeft > 0)
         {
             timer.TimeLeft += 20f;
             Destroy(other.gameObject);
+            voice.PlayOneShot(plank);
         }
     }
 }

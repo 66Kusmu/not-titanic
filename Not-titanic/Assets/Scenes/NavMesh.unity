@@ -650,7 +650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71919a1f469cfc44b9038cff1fd3389b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnable: {fileID: 3505573476794337865, guid: 2051a2027e20ad64eaa8e68172342360, type: 3}
+  spawnable: {fileID: 566470557082953492, guid: 0110f7f87980bae47bb51306b9368efb, type: 3}
 --- !u!114 &398173637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71919a1f469cfc44b9038cff1fd3389b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnable: {fileID: 7537186533140118949, guid: f06a61352d236df4c876d8b62b942987, type: 3}
+  spawnable: {fileID: 3564518601788384511, guid: e27f93ed58e6cde40b8d4cbc65320cfc, type: 3}
 --- !u!4 &398173638
 Transform:
   m_ObjectHideFlags: 0
@@ -3981,25 +3981,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1888185429873735660, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: boat1
+      propertyPath: plank
       value: 
-      objectReference: {fileID: 7968530083340801165, guid: d342c87de64a0984eb99be13ae880263, type: 3}
+      objectReference: {fileID: 8300000, guid: 7271296865a751a4094f2c8a0ef80457, type: 3}
     - target: {fileID: 1888185429873735660, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: boat2
+      propertyPath: penguin
       value: 
-      objectReference: {fileID: 2577404672780452541, guid: c9267b721614d8c45a083233b8e9602a, type: 3}
-    - target: {fileID: 1888185429873735660, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: boat3
-      value: 
-      objectReference: {fileID: 4616102594735988202, guid: 46732b726ccdd524e9fbad94fc0a1d81, type: 3}
-    - target: {fileID: 1888185429873735660, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: boat4
-      value: 
-      objectReference: {fileID: 4321287899066144946, guid: 2f307e7c12b9f8c45a052f2d6bd837e7, type: 3}
-    - target: {fileID: 1888185429873735660, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: boat5
-      value: 
-      objectReference: {fileID: 3880868617620687863, guid: aad478cbbb225b54080bb8bc351554b0, type: 3}
+      objectReference: {fileID: 8300000, guid: 156b1509170282d4ab9075ba86894740, type: 3}
     - target: {fileID: 1888185429873735660, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: ConstraintX
       value: 125
@@ -4020,10 +4008,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipDemoParticles
       objectReference: {fileID: 0}
-    - target: {fileID: 2970240363298457774, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3933659801435064634, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4047,18 +4031,6 @@ PrefabInstance:
     - target: {fileID: 4583755401467749845, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4940513401194826982, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5594160206493381922, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6294350392146774394, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: m_Constraints
-      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 6385764952373569548, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4098,18 +4070,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6385764952373569548, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6572190679105358040, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
-      objectReference: {fileID: 0}
-    - target: {fileID: 8125205714769759710, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8872231520219496494, guid: 856a8cfc91aa1ad4d86ead17f9f8a3c4, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
